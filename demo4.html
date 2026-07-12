@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse String Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            color: #333;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #74ebd5;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background: #74ebd5;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #4bb3a7;
+        }
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reverse String Demo</h2>
+        <input type="text" id="inputText" placeholder="Enter text here">
+        <button onclick="reverseText()">Reverse</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function reverseText() {
+            let input = document.getElementById("inputText").value;
+            let reversed = input.split("").reverse().join("");
+            document.getElementById("output").innerText = "Reversed: " + reversed;
+        }
+    </script>
+</body>
+</html>
